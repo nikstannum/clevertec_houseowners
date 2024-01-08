@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/houseowners
+    username: postgres
+    password: root
+    hikari:
+      maximum-pool-size: 20
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 50
+      pagination:
+  jpa:
+    persistence:
+      unit_name: psql
+  liquibase:
+    change-log: db.changelog-master.yml
+    enabled: true
